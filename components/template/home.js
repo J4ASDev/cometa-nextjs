@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Head from 'next/head'
 import { Box } from '@mui/system'
 import Checkbox from '@mui/material/Checkbox'
 import Grid from '@mui/material/Grid'
@@ -14,6 +15,10 @@ import dateFormat from '../../utils/dateFormat'
 function HomeTemplate({ name, ordersByStatus }) {
   return (
     <Box>
+      <Head>
+        <meta httpEquiv='Content-Security-Policy' content='upgrade-insecure-requests' />
+      </Head>
+
       <Box marginBottom={3}>
         <Typography variant='h3' align='center' marginBottom={0} fontSize={24}>Estudiante</Typography>
         <Typography variant='h4' align='center'>{name}</Typography>
